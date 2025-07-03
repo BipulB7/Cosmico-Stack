@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+// src/hooks/useFadeInOnScroll.js
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
 import { useEffect, useRef, useState } from "react";
 
 export const useFadeInOnScroll = (threshold = 0.3) => {

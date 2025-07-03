@@ -21,7 +21,11 @@ code {
     monospace;
 }
 
+<<<<<<< HEAD
 /*  */
+=======
+/* === Scroll Animation for Tech Showcase === */
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
 @keyframes scroll {
   0% {
     transform: translateX(0%);
@@ -37,7 +41,11 @@ code {
   width: max-content;
 }
 
+<<<<<<< HEAD
 /*  */
+=======
+/* === Fade-in & Scroll Effects === */
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -57,7 +65,11 @@ code {
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
 }
 
+<<<<<<< HEAD
 /* reusable classes */
+=======
+/* Optional: reusable classes (if not using inline styles) */
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
 .fade-in {
   animation: fade-in 0.7s ease-out forwards;
 }
@@ -74,10 +86,17 @@ code {
   animation: fade-in 0.7s ease-out 0.8s forwards;
 }
 
+<<<<<<< HEAD
 /*  */
 body {
   overflow-y: scroll;
   scrollbar-width: none; /*  fallback  */
+=======
+/* === Dynamic Gradient Scrollbar === */
+body {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox fallback (no white gap) */
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
 }
 
 body::-webkit-scrollbar {
@@ -94,6 +113,7 @@ body::-webkit-scrollbar-thumb {
   background-clip: padding-box;
   border: 2px solid transparent;
   transition: background 0.3s ease, opacity 0.3s ease;
+<<<<<<< HEAD
   opacity: 0; 
 }
 
@@ -106,17 +126,39 @@ body::-webkit-scrollbar-corner {
 }
 
 
+=======
+  opacity: 0; /* Invisible by default */
+}
+
+body:hover::-webkit-scrollbar-thumb {
+  opacity: 1; /* Fade in on hover */
+}
+
+body::-webkit-scrollbar-corner {
+  background: transparent; /* Remove bottom-right white square */
+}
+
+/* === Optional Firefox Support === */
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
 html {
   scrollbar-width: thin;
   scrollbar-color: #EB5B00 transparent;
 }
 
+<<<<<<< HEAD
+=======
+/* Gradient text for CosmicoAI logo */
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
 .gradient-text {
   background: linear-gradient(to right, #FFB200, #EB5B00, #E52020);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+<<<<<<< HEAD
+=======
+/* Nav link hover effect */
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
 .nav-link {
   color: white;
   transition: color 0.3s ease;
@@ -125,6 +167,10 @@ html {
   color: #FFB200;
 }
 
+<<<<<<< HEAD
+=======
+/* Contact icons */
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
 .contact-icon {
   color: #FFB200;
   font-size: 1.5rem;
@@ -135,7 +181,11 @@ html {
   color: #E52020;
 }
 
+<<<<<<< HEAD
 
+=======
+/* For cleaner scrollbar */
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -175,7 +225,11 @@ html {
   animation: fade-in 1s ease-in-out forwards;
 }
 
+<<<<<<< HEAD
 
+=======
+/* in index.css or a global file */
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
 .text-primary {
   color: #FFB200;
 }

@@ -4,7 +4,10 @@
   "private": true,
   "dependencies": {
     "ajv": "^8.17.1",
+<<<<<<< HEAD
     "axios": "^1.10.0",
+=======
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
     "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -15,7 +18,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+<<<<<<< HEAD
     "build": "CI=false react-scripts build",
+=======
+    "build": "react-scripts build",
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

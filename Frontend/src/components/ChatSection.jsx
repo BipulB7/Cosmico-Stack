@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from "react";
+=======
+import React from "react";
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
 import {
   FileSearch,
   Brain,
@@ -7,6 +11,7 @@ import {
   Sparkles,
   Lightbulb,
 } from "lucide-react";
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 
 const ChatSection = () => {
@@ -14,6 +19,12 @@ const ChatSection = () => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
+=======
+import { useNavigate } from 'react-router-dom';
+
+const ChatSection = () => {
+  const navigate = useNavigate();
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
   const useCases = [
     {
       icon: <FileSearch className="w-10 h-10 text-[#FFB200]" />,
@@ -47,6 +58,7 @@ const ChatSection = () => {
     },
   ];
 
+<<<<<<< HEAD
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -85,6 +97,24 @@ const ChatSection = () => {
         </h2>
 
         <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ${fadeIn} ${transition}`}>
+=======
+  return (
+    <section
+      id="get-started"
+      className="relative min-h-screen py-24 px-4 bg-black text-white flex flex-col justify-center items-center overflow-hidden"
+    >
+      {/* ⭐ Background Layers */}
+      <div className="stars absolute top-0 left-0 w-full h-full z-0"></div>
+      <div className="twinkling absolute top-0 left-0 w-full h-full z-0"></div>
+
+      {/* 💡 Content */}
+      <div className="w-full max-w-6xl text-center relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-[#FFB200] via-[#EB5B00] to-[#E52020] text-transparent bg-clip-text">
+          Get Started
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
           {useCases.map((uc, idx) => (
             <div
               key={idx}
@@ -97,10 +127,17 @@ const ChatSection = () => {
           ))}
         </div>
 
+<<<<<<< HEAD
         {/*  Chat Button */}
         <button
           onClick={() => navigate('/chat')}
           className="mt-12 px-8 py-3 bg-gradient-to-r from-[#FFB200] via-[#EB5B00] to-[#E52020] text-black font-bold rounded-lg hover:opacity-90 transition"
+=======
+        {/* ✨ Chat Button */}
+        <button
+            onClick={() => navigate('/chat')}
+    className="mt-12 px-8 py-3 bg-gradient-to-r from-[#FFB200] via-[#EB5B00] to-[#E52020] text-black font-bold rounded-lg hover:opacity-90 transition"
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
         >
           Chat Now
         </button>

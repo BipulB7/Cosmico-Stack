@@ -1,7 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Search, BookOpenCheck, Sparkles, FileText } from "lucide-react";
+<<<<<<< HEAD
 import { HeyCosmico } from "./HeyCosmico"; 
 import "./Home.css"; 
+=======
+import { HeyCosmico } from "./HeyCosmico"; // ✅ Adjust if your HeyCosmico is in a different folder
+import "./Home.css"; // ✅ This should include .stars and .twinkling
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
 
 const MissionSection = () => {
   const sectionRef = useRef(null);
@@ -34,11 +39,19 @@ const MissionSection = () => {
       ref={sectionRef}
       className="relative min-h-screen py-24 px-4 z-10 text-white overflow-hidden background-container"
     >
+<<<<<<< HEAD
       {/*  Background */}
       <div className="stars absolute top-0 left-0 w-full h-full z-0"></div>
       <div className="twinkling absolute top-0 left-0 w-full h-full z-0"></div>
 
       {/*  Mission Content */}
+=======
+      {/* ⭐ Background */}
+      <div className="stars absolute top-0 left-0 w-full h-full z-0"></div>
+      <div className="twinkling absolute top-0 left-0 w-full h-full z-0"></div>
+
+      {/* 🔍 Mission Content */}
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
       <div className="container mx-auto max-w-5xl relative z-10">
         <h2
           className={`text-4xl md:text-6xl font-bold mb-12 text-center logotitle ${fadeIn} ${transition}`}

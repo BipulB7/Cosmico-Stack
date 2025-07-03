@@ -6,7 +6,10 @@ import ChatSection from './components/ChatSection';
 import ContactSidebar from './components/ContactSidebar';
 import NavBar from './components/NavBar';
 import ChatPage from './pages/ChatPage'; // you'll create this
+<<<<<<< HEAD
 import CosmicoVsGPT from "./components/CosmicoVsGPT";
+=======
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
 
 const MainLayout = () => (
   <>
@@ -14,7 +17,10 @@ const MainLayout = () => (
     <ContactSidebar />
     <Home />
     <MissionSection />
+<<<<<<< HEAD
     <CosmicoVsGPT />
+=======
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
     <ChatSection />
   </>
 );

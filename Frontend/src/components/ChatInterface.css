@@ -116,6 +116,7 @@
     transform: translateY(-3px);
   }
 }
+<<<<<<< HEAD
 
 .chat-suggestions {
   padding: 1rem;
@@ -155,3 +156,5 @@
   opacity: 0.9;
 }
 
+=======
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)

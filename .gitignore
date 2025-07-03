@@ -21,4 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 Backend/.env
+=======
+>>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
