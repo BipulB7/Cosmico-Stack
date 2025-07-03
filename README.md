@@ -1,4 +1,4 @@
-# Cosmico — Your AI Research Assistant
+# Cosmico —  AI Research Assistant
 
 Cosmico is an AI-powered assistant that helps researchers, students, and enthusiasts explore, summarize, and synthesize academic research — starting with arXiv integration and expanding to more sources soon.
 
@@ -39,8 +39,8 @@ Cosmico/
 │   └── server.js
 └── .env                # (not committed) stores OpenAI API key
 ---
-
-##  Setup Instructions
+```
+###  Setup Instructions
 
 ###  Backend
 
