@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+
+}
+
+@keyframes move-twinkle-back {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+.background-container 
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+}
+
+.stars{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover; 
+  z-index: 1; 
+} 
+
+.twinkling{ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover; 
+  z-index: 2; 
+}
+
+/* ✅ Use absolute path (no import required) */
+.stars {
+  background: url('/assets/stars.png') repeat top center; 
+  z-index:1
+}
+
+.twinkling {
+  background: url('/assets/twinkling.png') repeat top center;
+  z-index: 1;
+  animation: move-twinkle-back 200s linear infinite;
+}
+
+@keyframes gradient-animation{
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 50%; } 
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column  ; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  font-size: 6rem;
+  font-weight: bold; 
+}  
+
+.logotitle{ 
+  /*Animated Gradient Background */
+  background: linear-gradient(70deg, #f91515, #EB5B00, #f97c15, #8e24fa);
+  background-size: 400% 400%;
+  animation: gradient-animation 6s ease infinite; 
+  /* Ensure the text is transparent so the gradient is visible */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+} 
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%; /* Start at the left */
+  }
+  50% {
+    background-position: 100% 50%; /* Move to the right */
+  }
+  100% {
+    background-position: 0% 50%; /* Move back to the left */
+  }
+}
+
+.subtitle{
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  color: #fff7ea;
+
+}
+
+.navbar{
+  position: relative; 
+  z-index: 3;
+}  
