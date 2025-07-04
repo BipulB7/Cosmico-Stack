@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   FileSearch,
   Brain,
@@ -7,10 +7,13 @@ import {
   Sparkles,
   Lightbulb,
 } from "lucide-react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const ChatSection = () => {
   const navigate = useNavigate();
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
   const useCases = [
     {
       icon: <FileSearch className="w-10 h-10 text-[#FFB200]" />,
@@ -44,9 +47,31 @@ const ChatSection = () => {
     },
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    const currentRef = sectionRef.current;
+    if (currentRef) observer.observe(currentRef);
+
+    return () => {
+      if (currentRef) observer.unobserve(currentRef);
+    };
+  }, [isVisible]);
+
+  const fadeIn = isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4";
+  const transition = "transition-all duration-700 ease-out";
+
   return (
     <section
       id="get-started"
+      ref={sectionRef}
       className="relative min-h-screen py-24 px-4 bg-black text-white flex flex-col justify-center items-center overflow-hidden"
     >
       {/* ⭐ Background Layers */}
@@ -55,11 +80,11 @@ const ChatSection = () => {
 
       {/* 💡 Content */}
       <div className="w-full max-w-6xl text-center relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-[#FFB200] via-[#EB5B00] to-[#E52020] text-transparent bg-clip-text">
+        <h2 className={`text-4xl md:text-6xl font-bold mb-12 text-center logotitle ${fadeIn} ${transition}`}>
           Get Started
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ${fadeIn} ${transition}`}>
           {useCases.map((uc, idx) => (
             <div
               key={idx}
@@ -74,8 +99,8 @@ const ChatSection = () => {
 
         {/* ✨ Chat Button */}
         <button
-            onClick={() => navigate('/chat')}
-    className="mt-12 px-8 py-3 bg-gradient-to-r from-[#FFB200] via-[#EB5B00] to-[#E52020] text-black font-bold rounded-lg hover:opacity-90 transition"
+          onClick={() => navigate('/chat')}
+          className="mt-12 px-8 py-3 bg-gradient-to-r from-[#FFB200] via-[#EB5B00] to-[#E52020] text-black font-bold rounded-lg hover:opacity-90 transition"
         >
           Chat Now
         </button>

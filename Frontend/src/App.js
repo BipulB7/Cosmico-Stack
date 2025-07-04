@@ -6,6 +6,7 @@ import ChatSection from './components/ChatSection';
 import ContactSidebar from './components/ContactSidebar';
 import NavBar from './components/NavBar';
 import ChatPage from './pages/ChatPage'; // you'll create this
+import CosmicoVsGPT from "./components/CosmicoVsGPT";
 
 const MainLayout = () => (
   <>
@@ -13,6 +14,7 @@ const MainLayout = () => (
     <ContactSidebar />
     <Home />
     <MissionSection />
+    <CosmicoVsGPT />
     <ChatSection />
   </>
 );
