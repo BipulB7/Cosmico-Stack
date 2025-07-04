@@ -116,3 +116,42 @@
     transform: translateY(-3px);
   }
 }
+
+.chat-suggestions {
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.chat-tip {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.suggestion-btn {
+  display: block;
+  width: 100%;
+  margin: 0.3rem 0;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  text-align: left;
+}
+
+.suggestion-btn.research {
+  background-color: #1e3a8a; /* blue */
+  color: white;
+}
+
+.suggestion-btn.general {
+  background-color: #444; /* gray */
+  color: white;
+}
+
+.suggestion-btn:hover {
+  opacity: 0.9;
+}
+

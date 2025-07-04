@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ChatInterface from '../components/ChatInterface';
+import { sendMessageToAI } from '../api/chatApi'; // ✅ Make sure this exists
 import '../index.css';
 
 const ChatPage = () => {
@@ -16,6 +17,25 @@ const ChatPage = () => {
     const newId = chats.length + 1;
     setChats(prev => [...prev, { id: newId, messages: [] }]);
     setCurrentChatId(newId);
+  };
+
+  const handleSendMessage = async (userText) => {
+    const newUserMessage = { role: 'user', content: userText };
+    const currentMessages = currentChat.messages;
+    const updatedMessages = [...currentMessages, newUserMessage];
+
+    updateMessages(updatedMessages);
+
+    try {
+      const aiReply = await sendMessageToAI(userText);
+      const newAiMessage = { role: 'assistant', content: aiReply };
+      updateMessages([...updatedMessages, newAiMessage]);
+    } catch (err) {
+      updateMessages([
+        ...updatedMessages,
+        { role: 'assistant', content: '⚠️ Error connecting to AI. Please try again.' },
+      ]);
+    }
   };
 
   const updateMessages = (updatedMessages) => {
@@ -81,6 +101,7 @@ const ChatPage = () => {
                 key={currentChat.id}
                 messages={currentChat.messages}
                 onUpdateMessages={updateMessages}
+                onSendMessage={handleSendMessage} // ✅ now active
               />
             </div>
           </div>

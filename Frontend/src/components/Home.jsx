@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import './Home.css';
 import { TechShowcase } from './TechShowcase';
 
+
 const Home = () => {
   return (
     <div className="background-container">
