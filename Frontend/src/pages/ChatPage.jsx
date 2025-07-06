@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ChatInterface from '../components/ChatInterface';
-import { sendMessageToAI } from '../api/chatApi'; // ✅ Make sure this exists
+import { sendMessageToAI } from '../api/chatApi'; 
 import '../index.css';
 
 const ChatPage = () => {
@@ -33,7 +33,7 @@ const ChatPage = () => {
     } catch (err) {
       updateMessages([
         ...updatedMessages,
-        { role: 'assistant', content: '⚠️ Error connecting to AI. Please try again.' },
+        { role: 'assistant', content: ' Error connecting to AI. Please try again.' },
       ]);
     }
   };
@@ -50,23 +50,23 @@ const ChatPage = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
-      {/* ⭐ Background */}
+      {/*  Background */}
       <div className="stars absolute top-0 left-0 w-full h-full z-0"></div>
       <div className="twinkling absolute top-0 left-0 w-full h-full z-0"></div>
 
-      {/* 🌠 Welcome Text */}
+      {/*  Welcome  */}
       {showIntro && (
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 text-4xl md:text-6xl font-extrabold z-20 animate-welcome text-transparent bg-clip-text bg-gradient-to-r from-[#FFB200] via-[#EB5B00] to-[#E52020]">
           WELCOME TO COSMICO
         </div>
       )}
 
-      {/* 💬 Main Chat Layout */}
+      {/*   Chat Layout */}
       {!showIntro && (
         <div className="relative z-10 flex items-center justify-center min-h-screen px-4 animate-fade-in">
           <div className="w-full max-w-6xl h-[90vh] rounded-3xl border border-white/10 bg-black/50 backdrop-blur-md shadow-xl flex overflow-hidden">
             
-            {/* 🚀 Sidebar */}
+            {/*  Sidebar */}
             <div className="w-[260px] bg-gradient-to-b from-[#1f1f1f]/80 to-[#2c2c2c]/60 border-r border-white/10 p-4 flex flex-col justify-between">
               <div>
                 <h2 className="text-xl font-bold mb-4 text-[#FFB200]">CosmicoBot</h2>
@@ -95,13 +95,13 @@ const ChatPage = () => {
               <div className="text-xs text-white/60 text-center mt-4">Log In</div>
             </div>
 
-            {/* 💬 ChatInterface */}
+            {/*  Interface */}
             <div className="flex-1 flex flex-col">
               <ChatInterface
                 key={currentChat.id}
                 messages={currentChat.messages}
                 onUpdateMessages={updateMessages}
-                onSendMessage={handleSendMessage} // ✅ now active
+                onSendMessage={handleSendMessage} //   active
               />
             </div>
           </div>

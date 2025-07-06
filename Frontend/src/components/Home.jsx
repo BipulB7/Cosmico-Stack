@@ -15,7 +15,7 @@ const Home = () => {
       <div className="twinkling"></div>
 
       <div className="content">
-        {/* ✅ Wrap logotitle in animated div */}
+        {/*  logotitle in animated div */}
         <div className="opacity-0 animate-[fade-in_0.7s_ease-out_forwards]">
           <p className="logotitle">Cosmico AI</p>
         </div>
@@ -26,7 +26,7 @@ const Home = () => {
 
       </div>
 
-      {/* Tech Strip Section */}
+      {/* Tech  Section */}
       <div className="absolute bottom-0 w-full z-10 opacity-0 animate-[fade-in_0.7s_ease-out_0.6s_forwards]">
         <TechShowcase />
       </div>

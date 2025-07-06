@@ -1,10 +1,10 @@
-// routes/chat.js
+
 const express = require('express');
 const router = express.Router();
 const { getSmartResponse } = require('../services/aiService');
 const { fetchArxivPapers } = require('../services/arxivService');
 
-// 🔍 Extract probable research topic from user message
+//  probable research topic from user message
 function extractArxivQuery(message) {
   const knownTopics = [
     "quantum gravity", "string theory", "general relativity", "dark matter",

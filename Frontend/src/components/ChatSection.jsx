@@ -74,11 +74,11 @@ const ChatSection = () => {
       ref={sectionRef}
       className="relative min-h-screen py-24 px-4 bg-black text-white flex flex-col justify-center items-center overflow-hidden"
     >
-      {/* ⭐ Background Layers */}
+      
       <div className="stars absolute top-0 left-0 w-full h-full z-0"></div>
       <div className="twinkling absolute top-0 left-0 w-full h-full z-0"></div>
 
-      {/* 💡 Content */}
+      {/*  Content */}
       <div className="w-full max-w-6xl text-center relative z-10">
         <h2 className={`text-4xl md:text-6xl font-bold mb-12 text-center logotitle ${fadeIn} ${transition}`}>
           Get Started
@@ -97,7 +97,7 @@ const ChatSection = () => {
           ))}
         </div>
 
-        {/* ✨ Chat Button */}
+        {/*  Chat Button */}
         <button
           onClick={() => navigate('/chat')}
           className="mt-12 px-8 py-3 bg-gradient-to-r from-[#FFB200] via-[#EB5B00] to-[#E52020] text-black font-bold rounded-lg hover:opacity-90 transition"

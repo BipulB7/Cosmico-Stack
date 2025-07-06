@@ -1,4 +1,4 @@
-// frontend/src/api/chatApi.js
+
 export async function sendMessageToAI(message) {
   try {
     const res = await fetch('http://localhost:4000/api/chat', {

@@ -21,7 +21,7 @@ code {
     monospace;
 }
 
-/* === Scroll Animation for Tech Showcase === */
+/*  */
 @keyframes scroll {
   0% {
     transform: translateX(0%);
@@ -37,7 +37,7 @@ code {
   width: max-content;
 }
 
-/* === Fade-in & Scroll Effects === */
+/*  */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -57,7 +57,7 @@ code {
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
 }
 
-/* Optional: reusable classes (if not using inline styles) */
+/* reusable classes */
 .fade-in {
   animation: fade-in 0.7s ease-out forwards;
 }
@@ -74,10 +74,10 @@ code {
   animation: fade-in 0.7s ease-out 0.8s forwards;
 }
 
-/* === Dynamic Gradient Scrollbar === */
+/*  */
 body {
   overflow-y: scroll;
-  scrollbar-width: none; /* Firefox fallback (no white gap) */
+  scrollbar-width: none; /*  fallback  */
 }
 
 body::-webkit-scrollbar {
@@ -94,31 +94,29 @@ body::-webkit-scrollbar-thumb {
   background-clip: padding-box;
   border: 2px solid transparent;
   transition: background 0.3s ease, opacity 0.3s ease;
-  opacity: 0; /* Invisible by default */
+  opacity: 0; 
 }
 
 body:hover::-webkit-scrollbar-thumb {
-  opacity: 1; /* Fade in on hover */
+  opacity: 1; 
 }
 
 body::-webkit-scrollbar-corner {
-  background: transparent; /* Remove bottom-right white square */
+  background: transparent; 
 }
 
-/* === Optional Firefox Support === */
+
 html {
   scrollbar-width: thin;
   scrollbar-color: #EB5B00 transparent;
 }
 
-/* Gradient text for CosmicoAI logo */
 .gradient-text {
   background: linear-gradient(to right, #FFB200, #EB5B00, #E52020);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Nav link hover effect */
 .nav-link {
   color: white;
   transition: color 0.3s ease;
@@ -127,7 +125,6 @@ html {
   color: #FFB200;
 }
 
-/* Contact icons */
 .contact-icon {
   color: #FFB200;
   font-size: 1.5rem;
@@ -138,7 +135,7 @@ html {
   color: #E52020;
 }
 
-/* For cleaner scrollbar */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -178,7 +175,7 @@ html {
   animation: fade-in 1s ease-in-out forwards;
 }
 
-/* in index.css or a global file */
+
 .text-primary {
   color: #FFB200;
 }
