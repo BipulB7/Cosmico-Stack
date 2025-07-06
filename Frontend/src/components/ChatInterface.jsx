@@ -62,7 +62,7 @@ const ChatInterface = ({ messages, onUpdateMessages }) => {
 
       const botMsg = {
         type: 'bot',
-        text: res.data.response || "⚠️ No response received."
+        text: res.data.response || " No response received."
       };
 
       onUpdateMessages([...updatedMessages, botMsg]);
@@ -70,7 +70,7 @@ const ChatInterface = ({ messages, onUpdateMessages }) => {
       console.error("Error:", err);
       const errorMsg = {
         type: 'bot',
-        text: "❌ Something went wrong. Try again."
+        text: " Something went wrong. Try again."
       };
       onUpdateMessages([...updatedMessages, errorMsg]);
     } finally {

@@ -1,4 +1,4 @@
-// src/hooks/useFadeInOnScroll.js
+
 import { useEffect, useRef, useState } from "react";
 
 export const useFadeInOnScroll = (threshold = 0.3) => {
