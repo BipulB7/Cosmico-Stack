@@ -56,7 +56,7 @@ const ChatInterface = ({ messages, onUpdateMessages }) => {
     setIsTyping(true);
 
     try {
-      const res = await axios.post('http://localhost:4000/api/chat', {
+      const res = await axios.post('https://cosmico-backend.onrender.com', {
         message: input
       });
 
