@@ -5,19 +5,11 @@ import './ChatInterface.css';
 
 const starterPrompts = [
   {
-    label: "Access arXiv and summarize the introduction of a recent paper on quantum gravity",
-    type: "research"
-  },
-  {
-    label: "Find a recent arXiv paper on string theory and explain its key results",
-    type: "research"
-  },
-  {
     label: "Fetch a paper on arXiv related to dark matter and summarize it",
     type: "research"
   },
   {
-    label: "Use arXiv to compare two recent studies on quantum computing",
+    label: "Fetch a paper on arXiv related to quantum models, then summarize it and generate citations",
     type: "research"
   },
   {
