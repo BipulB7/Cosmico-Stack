@@ -4,9 +4,13 @@ import './Home.css';
 import { TechShowcase } from './TechShowcase';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
+=======
+
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
 const Home = () => {
   return (
     <div className="background-container">

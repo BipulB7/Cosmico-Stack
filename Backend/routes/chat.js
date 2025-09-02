@@ -4,7 +4,11 @@ const router = express.Router();
 const { getSmartResponse } = require('../services/aiService');
 const { fetchArxivPapers } = require('../services/arxivService');
 
+<<<<<<< HEAD
 //  probable research topic from user message
+=======
+// 🔍 Extract probable research topic from user message
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
 function extractArxivQuery(message) {
   const knownTopics = [
     "quantum gravity", "string theory", "general relativity", "dark matter",

@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import ChatInterface from '../components/ChatInterface';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { sendMessageToAI } from '../api/chatApi'; 
 =======
 >>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
+=======
+import { sendMessageToAI } from '../api/chatApi'; // ✅ Make sure this exists
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
 import '../index.css';
 
 const ChatPage = () => {
@@ -23,6 +27,9 @@ const ChatPage = () => {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
   const handleSendMessage = async (userText) => {
     const newUserMessage = { role: 'user', content: userText };
     const currentMessages = currentChat.messages;
@@ -37,13 +44,20 @@ const ChatPage = () => {
     } catch (err) {
       updateMessages([
         ...updatedMessages,
+<<<<<<< HEAD
         { role: 'assistant', content: ' Error connecting to AI. Please try again.' },
+=======
+        { role: 'assistant', content: '⚠️ Error connecting to AI. Please try again.' },
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
       ]);
     }
   };
 
+<<<<<<< HEAD
 =======
 >>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
+=======
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
   const updateMessages = (updatedMessages) => {
     setChats(prev =>
       prev.map(chat =>
@@ -128,9 +142,13 @@ const ChatPage = () => {
                 messages={currentChat.messages}
                 onUpdateMessages={updateMessages}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 onSendMessage={handleSendMessage} //   active
 =======
 >>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
+=======
+                onSendMessage={handleSendMessage} // ✅ now active
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
               />
             </div>
           </div>

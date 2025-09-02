@@ -3,10 +3,17 @@ const { OpenAI } = require("openai");
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 /**
+<<<<<<< HEAD
  *  which GPT model to use based on message complexity
  * @param {string} userMessage
  * @param {boolean} summarizePapers
  * @returns {Promise<string>} - Model  
+=======
+ * Decide which GPT model to use based on message complexity or paper summarization.
+ * @param {string} userMessage
+ * @param {boolean} summarizePapers
+ * @returns {Promise<string>} - Model name to use
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
  */
 async function determineModel(userMessage, summarizePapers) {
   if (summarizePapers) return "gpt-4o";
@@ -36,7 +43,11 @@ Message: "${userMessage}"`;
 }
 
 /**
+<<<<<<< HEAD
  *  AI 
+=======
+ * Generate AI response, injecting arXiv papers if applicable.
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
  * @param {string} userMessage
  * @param {boolean} summarizePapers
  * @param {Array} papers

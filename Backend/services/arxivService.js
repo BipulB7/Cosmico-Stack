@@ -5,12 +5,21 @@ const xml2js = require('xml2js');
 const ARXIV_API_URL = 'http://export.arxiv.org/api/query';
 
 /**
+<<<<<<< HEAD
  * Fetch papers 
  * 
  * @param {string} query - 
  * @param {number} start - 
  * @param {number} max_results - 
  * @returns {Promise<Array>} - 
+=======
+ * Fetch papers from arXiv based on a user query.
+ * 
+ * @param {string} query - Search term (e.g. "quantum gravity")
+ * @param {number} start - Start index for pagination
+ * @param {number} max_results - Max number of results to fetch
+ * @returns {Promise<Array>} - Array of formatted paper objects
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
  */
 async function fetchArxivPapers(query, start = 0, max_results = 5) {
   const encodedQuery = encodeURIComponent(`all:${query}`);
@@ -25,11 +34,19 @@ async function fetchArxivPapers(query, start = 0, max_results = 5) {
     if (!entries) return [];
 
     if (!Array.isArray(entries)) {
+<<<<<<< HEAD
       entries = [entries]; // Normalize 
     }
 
     return entries.map(entry => {
       //  PDF link
+=======
+      entries = [entries]; // Normalize to array
+    }
+
+    return entries.map(entry => {
+      // Find PDF link
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
       let pdfLink = '';
       if (Array.isArray(entry.link)) {
         const pdfEntry = entry.link.find(l => l.$.type === 'application/pdf');

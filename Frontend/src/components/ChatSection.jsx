@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from "react";
 =======
 import React from "react";
 >>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
+=======
+import React, { useEffect, useRef, useState } from "react";
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
 import {
   FileSearch,
   Brain,
@@ -11,6 +15,7 @@ import {
   Sparkles,
   Lightbulb,
 } from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 
@@ -25,6 +30,15 @@ import { useNavigate } from 'react-router-dom';
 const ChatSection = () => {
   const navigate = useNavigate();
 >>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
+=======
+import { useNavigate } from "react-router-dom";
+
+const ChatSection = () => {
+  const navigate = useNavigate();
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
   const useCases = [
     {
       icon: <FileSearch className="w-10 h-10 text-[#FFB200]" />,
@@ -59,6 +73,9 @@ const ChatSection = () => {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -80,6 +97,7 @@ const ChatSection = () => {
   const fadeIn = isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4";
   const transition = "transition-all duration-700 ease-out";
 
+<<<<<<< HEAD
   return (
     <section
       id="get-started"
@@ -98,9 +116,12 @@ const ChatSection = () => {
 
         <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ${fadeIn} ${transition}`}>
 =======
+=======
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
   return (
     <section
       id="get-started"
+      ref={sectionRef}
       className="relative min-h-screen py-24 px-4 bg-black text-white flex flex-col justify-center items-center overflow-hidden"
     >
       {/* ⭐ Background Layers */}
@@ -109,12 +130,16 @@ const ChatSection = () => {
 
       {/* 💡 Content */}
       <div className="w-full max-w-6xl text-center relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-[#FFB200] via-[#EB5B00] to-[#E52020] text-transparent bg-clip-text">
+        <h2 className={`text-4xl md:text-6xl font-bold mb-12 text-center logotitle ${fadeIn} ${transition}`}>
           Get Started
         </h2>
 
+<<<<<<< HEAD
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 >>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
+=======
+        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ${fadeIn} ${transition}`}>
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
           {useCases.map((uc, idx) => (
             <div
               key={idx}
@@ -135,9 +160,14 @@ const ChatSection = () => {
 =======
         {/* ✨ Chat Button */}
         <button
+<<<<<<< HEAD
             onClick={() => navigate('/chat')}
     className="mt-12 px-8 py-3 bg-gradient-to-r from-[#FFB200] via-[#EB5B00] to-[#E52020] text-black font-bold rounded-lg hover:opacity-90 transition"
 >>>>>>> 10c34de4 (Fixed_corrupted_files_and_backend_ready)
+=======
+          onClick={() => navigate('/chat')}
+          className="mt-12 px-8 py-3 bg-gradient-to-r from-[#FFB200] via-[#EB5B00] to-[#E52020] text-black font-bold rounded-lg hover:opacity-90 transition"
+>>>>>>> d23eb93d (Front+Backend fully live! Website deployment ready.)
         >
           Chat Now
         </button>
