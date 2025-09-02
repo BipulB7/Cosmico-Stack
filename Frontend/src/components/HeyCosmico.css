@@ -1,0 +1,60 @@
+.heycosmico-container {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  position: relative;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  word-break: break-word;
+}
+
+
+.heycosmico-quote-mark {
+  font-size: 6rem;
+  color: #FFB200;
+  line-height: 1;
+  font-family: Georgia, serif;
+  margin-bottom: -1.5rem;
+}
+
+.heycosmico-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: white;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  margin-bottom: 1rem;
+}
+
+.heycosmico-text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #e2e2e2;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.3px;
+  line-height: 1.6;
+}
+
+
+.blinking-cursor {
+  display: inline-block;
+  margin-left: 4px;
+  width: 1ch;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
+

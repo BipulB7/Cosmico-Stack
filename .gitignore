@@ -1,0 +1,23 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-*.log
+.pnpm-debug.log*
+
+# Builds
+build/
+dist/
+.out/
+.next/
+coverage/
+Frontend/build/
+
+# Caches
+.cache/
+**/.cache/
+.eslintcache
+.vscode/
+.DS_Store
+
+# CRA / Vite / Webpack
+*.local

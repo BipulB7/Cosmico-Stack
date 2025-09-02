@@ -1,0 +1,180 @@
+.chatbox {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  color: white;
+}
+
+.chat-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+
+.chat-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chat-suggestions button {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: white;
+  transition: background 0.2s;
+}
+.chat-suggestions button:hover {
+  background: #333;
+}
+
+.chat-msg {
+  margin: 0.4rem 0;
+}
+
+.chat-msg.user {
+  text-align: right;
+}
+
+.msg-bubble {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border-radius: 1rem;
+  max-width: 75%;
+  font-size: 0.9rem;
+}
+
+.chat-msg.user .msg-bubble {
+  background: linear-gradient(to right, #ccc, #eee);
+  color: black;
+}
+
+.chat-msg.bot .msg-bubble {
+  background: #2b2b2b;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 999px;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.chat-send {
+  background: transparent;
+  color: white;
+  padding: 0.3rem 0.5rem;
+  border: none;
+}
+/* ChatInterface.css */
+
+.typing {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.typing .dot {
+  height: 8px;
+  width: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: blink 1.4s infinite both;
+}
+
+.typing .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 80%, 100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+.chat-suggestions {
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.chat-tip {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.suggestion-btn {
+  display: block;
+  width: 100%;
+  margin: 0.3rem 0;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  text-align: left;
+}
+
+.suggestion-btn.research {
+  background-color: #1e3a8a; /* blue */
+  color: white;
+}
+
+.suggestion-btn.general {
+  background-color: #444; /* gray */
+  color: white;
+}
+
+.suggestion-btn:hover {
+  opacity: 0.9;
+}
+
+.chat-input {
+  overflow-y: auto;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+/* --- ChatInterface layout guards --- */
+.chatbox { height: 100%; }
+.chat-content { height: 100%; }
+
+/* Bubbles should never overflow horizontally (long URLs/LaTeX) */
+.msg-bubble {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* If you previously had absolute positioning on the input area, neutralize it */
+.chat-input-area {
+  position: sticky;  /* keep at bottom within the scroll container */
+  bottom: 0;
+}
+
+/* Optional: tidy suggestion buttons if they crowd input */
+.chat-suggestions { margin-bottom: 0.25rem; }
