@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
-
+@import 'katex/dist/katex.min.css';
 
 body {
   margin: 0;
@@ -181,4 +181,7 @@ html {
 }
 .bg-primary\/20 {
   background-color: rgba(255, 178, 0, 0.2);
+}
+html, body {
+  overscroll-behavior-y: none;
 }

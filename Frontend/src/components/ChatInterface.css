@@ -155,3 +155,35 @@
   opacity: 0.9;
 }
 
+.overscroll-contain {
+  overscroll-behavior: contain;
+}
+
+/* make sure bubbles never push layout sideways */
+.msg-bubble {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+.chat-input {
+  overflow-y: auto;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+/* --- ChatInterface layout guards --- */
+.chatbox { height: 100%; }
+.chat-content { height: 100%; }
+
+/* Bubbles should never overflow horizontally (long URLs/LaTeX) */
+.msg-bubble {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* If you previously had absolute positioning on the input area, neutralize it */
+.chat-input-area {
+  position: sticky;  /* keep at bottom within the scroll container */
+  bottom: 0;
+}
+
+/* Optional: tidy suggestion buttons if they crowd input */
+.chat-suggestions { margin-bottom: 0.25rem; }
